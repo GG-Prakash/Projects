@@ -6,6 +6,9 @@
 [![Amazon ECR](https://img.shields.io/badge/Amazon%20ECR-%23FF9900?style=for-the-badge&logo=amazonaws&logoColor=white)](https://docs.aws.amazon.com/AmazonECR/latest/userguide/what-is-ecr.html)
 [![Kubernetes](https://img.shields.io/badge/Kubernetes-%23326ce5?style=for-the-badge&logo=kubernetes&logoColor=white)](https://kubernetes.io/)
 [![Kops](https://img.shields.io/badge/Kops-%23000000?style=for-the-badge&logo=linux&logoColor=white)](https://github.com/kubernetes/kops)
+![Project Status](https://img.shields.io/badge/Status-In%20Process-blue?style=for-the-badge)
+![Environment](https://img.shields.io/badge/Environment-Staging-orange?style=for-the-badge)
+
 
 This project demonstrates an end-to-end automated **CI/CD pipeline** using Jenkins hosted on AWS EC2. It handles everything from GitHub push to Kubernetes deployment using tools like Docker, SonarQube, Trivy, and AWS ECR.
 
@@ -48,16 +51,6 @@ This project implements a fully automated CI/CD pipeline using Jenkins on AWS, e
 
 GitHub Repo → Jenkins → SonarQube → Docker Build → Trivy Scan → Push to ECR → Deploy to Kubernetes (via Kops)
 
-```mermaid
-graph LR
-  A[GitHub Repo] --> B[Jenkins CI]
-  B --> C[SonarQube - Code Analysis]
-  C --> D[Docker Build]
-  D --> E[Trivy - Image Scan]
-  E --> F[ECR - Push Image]
-  F --> G[Kops - Kubernetes Deploy]
-
-
 # Pre-Requisites
 
 ## Required Accounts and Tools
@@ -78,7 +71,7 @@ graph LR
   aws configure
   ```
 
-### 2. Development Tools
+### Development Tools
 - **Git**: Version control system
   ```bash
   # For Linux
@@ -89,7 +82,7 @@ graph LR
   brew install git
   ```
 
-### 3. CI/CD Integration
+### 2. CI/CD Integration
 - **SonarCloud Account**
   - Sign up at [SonarCloud](https://sonarcloud.io/)
   - Generate authentication token
@@ -104,44 +97,6 @@ graph LR
     ```
 
 ---
-
-### ✅ 3. **CI/CD Status Badge (Optional if you use GitHub Actions)**
-If you have a CI/CD workflow file in GitHub Actions:
-
-```markdown
-![CI/CD](https://github.com/your-username/your-repo/actions/workflows/ci.yml/badge.svg)
-
-
-## Implementaion
-## 1. Git Setup
-
-- **Push code to GitHub**  
-  Upload your frontend/backend project to a GitHub repository.
-
-- **Create GitHub Webhook**  
-  - Payload URL: `http://<jenkins-public-ip>:8080/github-webhook/`  
-  - Content type: `application/json`  
-  - Trigger: Push events
- 
-## 2. Jenkins & Docker Setup
-
-- **Launch EC2 (Ubuntu, t3.large, 30GB)**  
-  Open ports: `22`, `8080`, `9000`
-
-- **Install Jenkins & Docker**
-  ```bash
-  sudo apt update
-  sudo apt install -y openjdk-11-jdk
-  wget -q -O - https://pkg.jenkins.io/debian-stable/jenkins.io.key | sudo apt-key add -
-  sudo sh -c 'echo deb http://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'
-  sudo apt update && sudo apt install jenkins -y
-  sudo apt install docker.io -y
-  
-- **Add Jenkins user to Docker group**
-  ```bash
-  sudo usermod -aG docker jenkins
-  sudo systemctl restart jenkins
-  ```
 
 ## 3. Test Analysis (SonarQube)
 - **Run SonarQube in Docker**
@@ -218,7 +173,7 @@ If you have a CI/CD workflow file in GitHub Actions:
 
 ## 🛠️ Author 
 
-This project is maintained by **[Gnanaprakash](https://github.com/GG-Prakash)** 💡.
+This project is ![Maintained By](https://img.shields.io/badge/Maintained%20By-Gnana%20Prakash-blue?style=for-the-badge)💡.
 Your feedback and contributions are welcome!
 
 📧 **Connect with me:**
@@ -237,11 +192,6 @@ If you found this project helpful, please consider:
 
 > [!Important]
 > This documentation is continuously evolving. For the latest updates, please check the repository regularly.
-
-
-![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
-![Status](https://img.shields.io/badge/Status-Completed-blue?style=for-the-badge)
-![Issues](https://img.shields.io/github/issues/your-username/your-repo?style=for-the-badge)
 
 
 
