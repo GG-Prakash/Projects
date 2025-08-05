@@ -1,4 +1,4 @@
-#  CI/CD Pipeline using Jenkins, Docker, SonarQube, Trivy, ECR & Kubernetes (Kops)
+# 🚀 CI/CD Pipeline using Jenkins, Docker, SonarQube, Trivy, ECR & Kubernetes (Kops)
 
 This project demonstrates an end-to-end automated **CI/CD pipeline** using Jenkins hosted on AWS EC2. It handles everything from GitHub push to Kubernetes deployment using tools like Docker, SonarQube, Trivy, and AWS ECR.
 
@@ -193,7 +193,7 @@ This project is maintained by **[Gnanaprakash](https://github.com/GG-Prakash)** 
 Your feedback and contributions are welcome!
 
 📧 **Connect with me:**
-- **GitHub**: [@Gnanaprakash](https://github.com/GG-Prakash)
+- **GitHub**: [@Gnanaprakash G](https://github.com/GG-Prakash)
 - **Portfolio**: [View My Profile](https://gnanaprakash-devops.netlify.app/)
 - **LinkedIn**: [GnanaPrakash G](www.linkedin.com/in/gg-prakash)
 
