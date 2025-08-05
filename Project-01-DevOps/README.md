@@ -173,7 +173,7 @@ GitHub Repo → Jenkins → SonarQube → Docker Build → Trivy Scan → Push t
 
 ## 🛠️ Author 
 
-This project is maintained by **[Gnanaprakash](https://github.com/GG-Prakash)**💡.
+This project is maintained by **[Gnanaprakash G](https://github.com/GG-Prakash)**💡.
 Your feedback and contributions are welcome!
 
 📧 **Connect with me:**
