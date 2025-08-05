@@ -5,7 +5,6 @@
 [![Trivy](https://img.shields.io/badge/Trivy-%235C2D91?style=for-the-badge&logo=aqua&logoColor=white)](https://aquasecurity.github.io/trivy/)
 [![Amazon ECR](https://img.shields.io/badge/Amazon%20ECR-%23FF9900?style=for-the-badge&logo=amazonaws&logoColor=white)](https://docs.aws.amazon.com/AmazonECR/latest/userguide/what-is-ecr.html)
 [![Kubernetes](https://img.shields.io/badge/Kubernetes-%23326ce5?style=for-the-badge&logo=kubernetes&logoColor=white)](https://kubernetes.io/)
-[![Kops](https://img.shields.io/badge/Kops-%23000000?style=for-the-badge&logo=linux&logoColor=white)](https://github.com/kubernetes/kops)
 ![Project Status](https://img.shields.io/badge/Status-In%20Process-blue?style=for-the-badge)
 ![Environment](https://img.shields.io/badge/Environment-Staging-orange?style=for-the-badge)
 
