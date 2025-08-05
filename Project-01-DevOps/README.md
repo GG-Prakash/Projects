@@ -1,11 +1,11 @@
 # 🚀 CI/CD Pipeline using Jenkins, Docker, SonarQube, Trivy, ECR & Kubernetes (Kops)
-![Jenkins](https://img.shields.io/badge/Jenkins-%232C5263?style=for-the-badge&logo=jenkins&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-%230db7ed?style=for-the-badge&logo=docker&logoColor=white)
-![SonarQube](https://img.shields.io/badge/SonarQube-%2300b4fc?style=for-the-badge&logo=sonarqube&logoColor=white)
-![Trivy](https://img.shields.io/badge/Trivy-%235C2D91?style=for-the-badge&logo=trivy&logoColor=white)
-![Amazon ECR](https://img.shields.io/badge/Amazon%20ECR-%23FF9900?style=for-the-badge&logo=amazonaws&logoColor=white)
-![Kubernetes](https://img.shields.io/badge/Kubernetes-%23326ce5?style=for-the-badge&logo=kubernetes&logoColor=white)
-![Kops](https://img.shields.io/badge/Kops-%23000000?style=for-the-badge&logo=linux&logoColor=white)
+[![Jenkins](https://img.shields.io/badge/Jenkins-%232C5263?style=for-the-badge&logo=jenkins&logoColor=white)](https://www.jenkins.io/)
+[![Docker](https://img.shields.io/badge/Docker-%230db7ed?style=for-the-badge&logo=docker&logoColor=white)](https://www.docker.com/)
+[![SonarQube](https://img.shields.io/badge/SonarQube-%2300b4fc?style=for-the-badge&logo=sonarqube&logoColor=white)](https://www.sonarqube.org/)
+[![Trivy](https://img.shields.io/badge/Trivy-%235C2D91?style=for-the-badge&logo=aqua&logoColor=white)](https://aquasecurity.github.io/trivy/)
+[![Amazon ECR](https://img.shields.io/badge/Amazon%20ECR-%23FF9900?style=for-the-badge&logo=amazonaws&logoColor=white)](https://docs.aws.amazon.com/AmazonECR/latest/userguide/what-is-ecr.html)
+[![Kubernetes](https://img.shields.io/badge/Kubernetes-%23326ce5?style=for-the-badge&logo=kubernetes&logoColor=white)](https://kubernetes.io/)
+[![Kops](https://img.shields.io/badge/Kops-%23000000?style=for-the-badge&logo=linux&logoColor=white)](https://github.com/kubernetes/kops)
 
 This project demonstrates an end-to-end automated **CI/CD pipeline** using Jenkins hosted on AWS EC2. It handles everything from GitHub push to Kubernetes deployment using tools like Docker, SonarQube, Trivy, and AWS ECR.
 
@@ -45,6 +45,18 @@ This project implements a fully automated CI/CD pipeline using Jenkins on AWS, e
 
 ##  Architecture
 ![Architecture](Assets/architecture.png)
+
+GitHub Repo → Jenkins → SonarQube → Docker Build → Trivy Scan → Push to ECR → Deploy to Kubernetes (via Kops)
+
+```mermaid
+graph LR
+  A[GitHub Repo] --> B[Jenkins CI]
+  B --> C[SonarQube - Code Analysis]
+  C --> D[Docker Build]
+  D --> E[Trivy - Image Scan]
+  E --> F[ECR - Push Image]
+  F --> G[Kops - Kubernetes Deploy]
+
 
 # Pre-Requisites
 
@@ -90,6 +102,16 @@ This project implements a fully automated CI/CD pipeline using Jenkins on AWS, e
         <sonar.host.url>https://sonarcloud.io</sonar.host.url>
     </properties>
     ```
+
+---
+
+### ✅ 3. **CI/CD Status Badge (Optional if you use GitHub Actions)**
+If you have a CI/CD workflow file in GitHub Actions:
+
+```markdown
+![CI/CD](https://github.com/your-username/your-repo/actions/workflows/ci.yml/badge.svg)
+
+
 ## Implementaion
 ## 1. Git Setup
 
@@ -215,6 +237,11 @@ If you found this project helpful, please consider:
 
 > [!Important]
 > This documentation is continuously evolving. For the latest updates, please check the repository regularly.
+
+
+![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
+![Status](https://img.shields.io/badge/Status-Completed-blue?style=for-the-badge)
+![Issues](https://img.shields.io/github/issues/your-username/your-repo?style=for-the-badge)
 
 
 
